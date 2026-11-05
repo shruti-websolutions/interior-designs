@@ -6,6 +6,8 @@
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { OurProjectsSection } from './components/OurProjectsSection.tsx';
+import { WhyChooseUsSection } from './components/WhyChooseUsSection.tsx';
+import { Footer } from './components/Footer.tsx';
 import { StickyCallBar } from './components/StickyCallBar.tsx';
 
 export default function App() {
@@ -20,7 +22,13 @@ export default function App() {
 
         {/* Section 2: Our Projects (Explore Kitchen Types) */}
         <OurProjectsSection />
+
+        {/* Section 3: Why Choose Us */}
+        <WhyChooseUsSection />
       </main>
+
+      {/* Section 4: Contact & Studio Info (Footer) */}
+      <Footer />
 
       {/* Persistent Floating Call Bar on mobile */}
       <StickyCallBar />
