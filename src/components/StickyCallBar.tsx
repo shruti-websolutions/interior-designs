@@ -21,15 +21,15 @@ export const StickyCallBar: React.FC = () => {
         
         <div className="hidden xs:flex flex-col pl-2">
           <span className="text-xs text-white uppercase tracking-tight">Dorio Kitchens</span>
-          <span className="text-[10px] text-[#8ec641]">Pachawali Rd, Etawah</span>
+          <span className="text-[10px] text-[#72583d]">Pachawali Rd, Etawah</span>
         </div>
 
         <div className="flex items-center gap-2 w-full xs:w-auto">
           <a
             href={`tel:${BUSINESS_INFO.phoneRaw}`}
-            className="flex-1 xs:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#8ec641] hover:bg-[#9bd44e] text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-md"
+            className="flex-1 xs:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#72583d] hover:bg-[#856747] text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md shadow-[#72583d]/25"
           >
-            <Phone className="w-3.5 h-3.5 fill-black" />
+            <Phone className="w-3.5 h-3.5 fill-white text-white" />
             <span>Call {BUSINESS_INFO.phone}</span>
           </a>
 
@@ -40,7 +40,7 @@ export const StickyCallBar: React.FC = () => {
             className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-white/10 hover:bg-white/15 text-white font-semibold text-xs transition-colors"
             title="Chat on WhatsApp"
           >
-            <MessageCircle className="w-4 h-4 text-[#8ec641]" />
+            <MessageCircle className="w-4 h-4 text-[#72583d]" />
           </a>
         </div>
 

@@ -41,16 +41,16 @@ export const Hero: React.FC = () => {
         card.highlight ? (
           <div
             key={card.id}
-            className="bg-[#8ec641] text-black rounded-xl p-5 flex flex-col justify-between shadow-lg transition-transform hover:-translate-y-0.5"
+            className="bg-[#72583d] text-white rounded-xl p-5 flex flex-col justify-between shadow-lg transition-transform hover:-translate-y-0.5"
           >
-            <div className="w-6 h-6 rounded-md bg-black/15 flex items-center justify-center font-bold text-xs mb-3 text-black">
+            <div className="w-6 h-6 rounded-md bg-white/20 flex items-center justify-center font-bold text-xs mb-3 text-white">
               {card.id}
             </div>
             <div>
-              <h3 className="font-bold text-base tracking-tight text-black mb-1">
+              <h3 className="font-bold text-base tracking-tight text-white mb-1">
                 {card.title}
               </h3>
-              <p className="text-xs text-black/85 leading-snug font-medium">
+              <p className="text-xs text-white/90 leading-snug font-medium">
                 {card.description}
               </p>
             </div>
@@ -85,19 +85,19 @@ export const Hero: React.FC = () => {
         - Mobile: mobile-hero.webp with clean black text at bottom over cabinetry
         - Desktop: hero.jpg with full clarity, no blur overlays, crisp text and buttons
       */}
-      <section className="relative min-h-[100dvh] w-full flex flex-col justify-between pt-0 md:pt-24 pb-0 md:pb-12 bg-[#0B0D11] overflow-hidden">
+      <section id="home" className="relative min-h-[100dvh] w-full flex flex-col justify-between pt-0 md:pt-24 pb-0 md:pb-12 bg-[#0B0D11] overflow-hidden">
         {/* Background Hero Image with Art-Directed Mobile & Desktop Sources */}
         <div className="absolute inset-0 z-0">
           <picture className="w-full h-full block">
             {/* Mobile portrait image (<640px) in pristine 98% WebP and lossless original JPG */}
             <source
               media="(max-width: 639px)"
-              srcSet="/assets/aistudio/mobile-hero.webp"
+              srcSet="/assets/aistudio/hero.webp"
               type="image/webp"
             />
             <source
               media="(max-width: 639px)"
-              srcSet="/assets/aistudio/mobile-hero.jpg"
+              srcSet="/assets/aistudio/hero.webp"
               type="image/jpeg"
             />
             {/* Desktop landscape hero image: Same sage-green modular kitchen with glass-door wall cabinets, black chimney hood, and kettle positioned on the right half */}
@@ -140,21 +140,21 @@ export const Hero: React.FC = () => {
                 </p>
               </div>
 
-              {/* Mobile Call-to-Action (CTA) Buttons: 24px top spacing, 12px gap, 52px height, 8px radius */}
+              {/* Mobile Call-to-Action (CTA) Buttons: 24px top spacing, 12px gap, 52px height */}
               <div className="mt-6 flex flex-col gap-3 w-full">
-                {/* Primary Button: Solid green, dark text #111, full width, 52px tall, 8px radius */}
+                {/* Primary Button: Solid woodish tone, white text, full width, 52px tall */}
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="w-full h-[52px] rounded-[8px] bg-[#8ec641] hover:bg-[#9bd44e] active:scale-[0.99] text-[#111111] font-semibold text-base flex items-center justify-center gap-2.5 shadow-lg shadow-[#8ec641]/25 transition-all duration-200"
+                  className="w-full h-[52px] bg-[#72583d] hover:bg-[#856747] active:scale-[0.99] text-white font-semibold text-base flex items-center justify-center gap-2.5 shadow-lg shadow-[#72583d]/25 transition-all duration-200"
                 >
-                  <Phone className="w-4 h-4 fill-[#111111] text-[#111111]" />
+                  <Phone className="w-4 h-4 fill-white text-white" />
                   <span>Call for a Free Quote</span>
                 </a>
 
-                {/* Secondary Button: Transparent white fill (0.12), 1.5px solid white border, white text, 8px radius, backdrop-blur 6px */}
+                {/* Secondary Button: Transparent white fill (0.12), 1.5px solid white border, white text, backdrop-blur 6px */}
                 <a
                   href="#projects"
-                  className="w-full h-[52px] rounded-[8px] bg-[rgba(255,255,255,0.12)] hover:bg-[rgba(255,255,255,0.2)] active:scale-[0.99] border-[1.5px] border-white text-white font-medium text-base flex items-center justify-center gap-2 backdrop-blur-[6px] shadow-sm transition-all duration-200"
+                  className="w-full h-[52px] bg-[rgba(255,255,255,0.12)] hover:bg-[rgba(255,255,255,0.2)] active:scale-[0.99] border-[1.5px] border-white text-white font-medium text-base flex items-center justify-center gap-2 backdrop-blur-[6px] shadow-sm transition-all duration-200"
                 >
                   <span>View Catalog</span>
                 </a>
@@ -163,8 +163,8 @@ export const Hero: React.FC = () => {
 
             {/* DESKTOP HERO CONTENT (>= 768px / 1024px and wider) */}
             <div className="hidden md:block w-full max-w-[560px]">
-              {/* Eyebrow: small, uppercase, letter-spaced, green */}
-              <p className="text-xs sm:text-sm font-semibold tracking-widest text-[#8ec641] uppercase mb-3">
+              {/* Eyebrow: small, uppercase, letter-spaced, wood tone */}
+              <p className="text-xs sm:text-sm font-semibold tracking-widest text-[#72583d] uppercase mb-3">
                 MODULAR KITCHENS &amp; INTERIORS · ETAWAH
               </p>
 
@@ -180,19 +180,19 @@ export const Hero: React.FC = () => {
 
               {/* Buttons: 32px spacing from subtext (mt-8), 16px between buttons (gap-4, side by side) */}
               <div className="mt-8 flex flex-row items-center gap-4">
-                {/* Primary Button: Solid green, dark text #111, phone icon, 56px tall, 8px radius */}
+                {/* Primary Button: Solid wood tone, white text, phone icon, 56px tall */}
                 <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
-                  className="h-[56px] px-8 rounded-[8px] bg-[#8ec641] hover:bg-[#9bd44e] active:scale-[0.99] text-[#111111] font-semibold text-base inline-flex items-center justify-center gap-2.5 shadow-lg shadow-[#8ec641]/25 transition-all duration-200"
+                  className="h-[56px] px-8 bg-[#72583d] hover:bg-[#856747] active:scale-[0.99] text-white font-semibold text-base inline-flex items-center justify-center gap-2.5 shadow-lg shadow-[#72583d]/25 transition-all duration-200"
                 >
-                  <Phone className="w-5 h-5 fill-[#111111] text-[#111111]" />
+                  <Phone className="w-5 h-5 fill-white text-white" />
                   <span>Call for a Free Quote</span>
                 </a>
 
                 {/* Secondary Button: rgba(255,255,255,0.12) fill, 1.5px white border, white text, blur(6px), 56px tall, 8px radius */}
                 <a
                   href="#projects"
-                  className="h-[56px] px-8 rounded-[8px] bg-[rgba(255,255,255,0.12)] hover:bg-[rgba(255,255,255,0.2)] active:scale-[0.99] border-[1.5px] border-white text-white font-medium text-base inline-flex items-center justify-center gap-2 backdrop-blur-[6px] shadow-sm transition-all duration-200"
+                  className="h-[56px] px-8 bg-[rgba(255,255,255,0.12)] hover:bg-[rgba(255,255,255,0.2)] active:scale-[0.99] border-[1.5px] border-white text-white font-medium text-base inline-flex items-center justify-center gap-2 backdrop-blur-[6px] shadow-sm transition-all duration-200"
                 >
                   <span>View Catalog</span>
                 </a>
@@ -207,12 +207,7 @@ export const Hero: React.FC = () => {
         </div>
       </section>
 
-      {/* 4-Card Feature Strip - Positioned directly under the full-screen Hero on all viewports */}
-      <div className="relative z-10 w-full border-t border-white/10 bg-[#0B0D11]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-          {renderFeatureCards()}
-        </div>
-      </div>
+    
     </>
   );
 };

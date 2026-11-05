@@ -11,7 +11,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
 /**
  * Reusable Button Component:
- * - variant='primary': Parrot green (#8ec641), text-black, sharp corners (rounded-none).
+ * - variant='primary': Warm wood tone (#72583d), text-white, sharp corners (rounded-none).
  * - variant='secondary': Dark frosted glass with subtle border, sharp corners.
  * - Supports both `<button>` and `<a>` when `href` is supplied.
  */
@@ -28,9 +28,9 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variants = {
     primary:
-      'bg-[#8ec641] hover:bg-[#9bd44e] text-black font-semibold px-8 py-3.5 sm:px-9 sm:py-4 text-sm sm:text-base tracking-wide shadow-md shadow-[#8ec641]/20 hover:shadow-lg hover:shadow-[#8ec641]/30 hover:-translate-y-0.5 active:translate-y-0',
+      'bg-[#72583d] hover:bg-[#856747] text-white font-semibold px-8 py-3.5 sm:px-9 sm:py-4 text-sm sm:text-base tracking-wide shadow-md shadow-[#72583d]/25 hover:shadow-lg hover:shadow-[#72583d]/35 hover:-translate-y-0.5 active:translate-y-0',
     secondary:
-      'bg-black/20 sm:bg-black/30 hover:bg-black/30 sm:hover:bg-white/10 text-[#8ec641] sm:text-white font-semibold sm:font-medium px-8 py-3.5 sm:px-9 sm:py-4 text-sm sm:text-base border border-[#8ec641] hover:border-[#9bd44e] tracking-wide shadow-sm hover:shadow-[0_0_20px_rgba(142,198,65,0.25)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0',
+      'bg-black/20 sm:bg-black/30 hover:bg-black/30 sm:hover:bg-white/10 text-[#72583d] sm:text-white font-semibold sm:font-medium px-8 py-3.5 sm:px-9 sm:py-4 text-sm sm:text-base border border-[#72583d] hover:border-[#856747] tracking-wide shadow-sm hover:shadow-[0_0_20px_rgba(114,88,61,0.25)] transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0',
     outline:
       'bg-transparent hover:bg-white/10 text-white font-medium px-6 py-3.5 border border-white/20',
   };

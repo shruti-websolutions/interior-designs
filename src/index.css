@@ -39,10 +39,10 @@
   background: #232833;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8ec641;
+  background: #72583d;
 }
 
-/* Reusable Button Styles - Sharp edges (no rounded corners) */
+/* Reusable Button Styles - Wood tone with white text */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -50,20 +50,20 @@
   gap: 0.5rem;
   padding: 0.875rem 2rem;
   border-radius: 0 !important; /* Sharp corners */
-  background-color: #8ec641;
-  color: #000000;
+  background-color: #72583d;
+  color: #ffffff;
   font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 0.025em;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(142, 198, 65, 0.25);
+  box-shadow: 0 4px 14px rgba(114, 88, 61, 0.25);
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: #9bd44e;
+  background-color: #856747;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(142, 198, 65, 0.35);
+  box-shadow: 0 6px 20px rgba(114, 88, 61, 0.35);
 }
 
 .btn-primary:active {
@@ -82,7 +82,7 @@
   font-weight: 500;
   font-size: 0.9375rem;
   letter-spacing: 0.025em;
-  border: 1px solid #8ec641; /* Parrot green border */
+  border: 1px solid #72583d; /* Wood tone border */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -91,7 +91,7 @@
 
 .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.1); /* Translucent frosted hover */
-  border-color: #9bd44e;
+  border-color: #856747;
   transform: translateY(-1px);
   box-shadow: 0 0 20px rgba(142, 198, 65, 0.25);
 }
