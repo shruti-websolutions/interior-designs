@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/kitchenData.ts';
-import { Button } from './Button.tsx';
 
 interface FeatureCardItem {
   id: number;
@@ -86,7 +85,7 @@ export const Hero: React.FC = () => {
         - Mobile: mobile-hero.webp with clean black text at bottom over cabinetry
         - Desktop: hero.jpg with full clarity, no blur overlays, crisp text and buttons
       */}
-      <section className="relative min-h-[100dvh] w-full flex flex-col justify-between pt-20 sm:pt-28 pb-8 sm:pb-12 bg-[#0B0D11] overflow-hidden">
+      <section className="relative min-h-[100dvh] w-full flex flex-col justify-between pt-0 md:pt-24 pb-0 md:pb-12 bg-[#0B0D11] overflow-hidden">
         {/* Background Hero Image with Art-Directed Mobile & Desktop Sources */}
         <div className="absolute inset-0 z-0">
           <picture className="w-full h-full block">
@@ -101,58 +100,108 @@ export const Hero: React.FC = () => {
               srcSet="/assets/aistudio/mobile-hero.jpg"
               type="image/jpeg"
             />
-            {/* Desktop landscape hero image: Slightly reduced brightness on desktop (90%) for refined contrast and reduced glare */}
+            {/* Desktop landscape hero image: Same sage-green modular kitchen with glass-door wall cabinets, black chimney hood, and kettle positioned on the right half */}
             <img
-              src="/assets/aistudio/hero.jpg"
-              alt="Dorio Modular Kitchen in Etawah"
-              className="w-full h-full object-cover object-[center_35%] brightness-100 sm:brightness-75"
+              src="/assets/aistudio/hero.webp"
+              alt="Dorio Sage Green Modular Kitchen in Etawah"
+              className="w-full h-full object-cover object-[center_35%] lg:object-[72%_35%] brightness-115 md:brightness-100"
               loading="eager"
             />
           </picture>
 
-          {/* Top edge gradient for navbar contrast */}
-          <div className="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none" />
+          {/* MOBILE OVERLAYS (< 768px) */}
+          {/* 1. Mobile Top Gradient: subtle 120px fade (rgba(0,0,0,0.45) to transparent) so logo, phone & hamburger icon stay crisp */}
+          <div className="absolute top-0 inset-x-0 h-[120px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.45)_0%,transparent_100%)] pointer-events-none md:hidden" />
 
-          {/* Softened Left-to-Right Dark Gradient Overlay: fades out early around 48-50% width, preserving fridge luster and eliminating the dark void */}
-          <div className="absolute inset-y-0 left-0 w-full sm:w-[50%] lg:w-[48%] bg-gradient-to-r from-black/65 via-black/30 to-transparent pointer-events-none" />
+          {/* 2. Mobile Full-Height Gradient: 0.85 at bottom, 0.55 at 45%, fading to transparent at 80% height */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.55)_45%,transparent_80%)] pointer-events-none md:hidden" />
 
-          {/* Mobile Bottom-to-Top Gradient for mobile typography legibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent sm:hidden pointer-events-none" />
+          {/* DESKTOP OVERLAYS (>= 768px / 1024px+) */}
+          {/* 1. Desktop Top Gradient: subtle 140px fade (rgba(0,0,0,0.50) to transparent) so nav stays crisp */}
+          <div className="absolute top-0 inset-x-0 h-[140px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.50)_0%,transparent_100%)] pointer-events-none hidden md:block" />
+
+          {/* 2. Desktop Left-to-Right Linear Gradient: 0.80 at 0%, 0.55 at 35%, transparent at 65%. Right side stays bright! */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.80)_0%,rgba(0,0,0,0.55)_35%,transparent_65%)] pointer-events-none hidden md:block" />
         </div>
 
-        {/* Main Hero Content - Positioned at bottom on mobile over the clean mint cabinetry, centered on desktop */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16 pb-8 sm:py-12 flex-1 flex flex-col justify-end sm:justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-            {/* Left Text Column */}
-            <div className="lg:col-span-8 space-y-4 sm:space-y-5">
-              {/* Clean Left-to-Right Dark Gradient Overlay: Seamless, zero box edges, 100% unblurred photo on right */}
-              <div className="max-w-xl space-y-3 sm:space-y-4">
-                <h1 className="font-didact font-bold text-3xl sm:text-5xl lg:text-6xl text-white tracking-wider uppercase leading-tight sm:leading-[1.08] drop-shadow-md">
-                  DORIO DECOR
+        {/* Main Hero Content - Anchored to bottom on mobile (<768px), vertically centered on desktop (>=768px) */}
+        <div className="max-w-7xl mx-auto px-6 pb-8 pt-24 md:px-8 md:pt-20 md:pb-12 relative z-10 w-full flex-1 flex flex-col justify-end md:justify-center">
+          <div className="w-full">
+            {/* MOBILE HERO CONTENT (< 768px) */}
+            <div className="md:hidden w-full">
+              {/* Text Container: Pure typography, completely removed box, border, and shadows */}
+              <div className="space-y-3">
+                <h1 className="font-didact font-bold text-[28px] sm:text-[32px] text-white leading-[1.15] [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
+                  Modular Kitchens Built for Etawah Homes
                 </h1>
 
-                <p className="font-kodchasan font-medium text-white/95 sm:text-zinc-100 text-base sm:text-lg leading-relaxed drop-shadow-sm max-w-lg">
-                  Custom modular kitchens and luxury interiors — your path to modern, functional, and durable design in Etawah.
+                <p className="font-kodchasan font-medium text-[16px] text-white leading-[1.5] [text-shadow:0_2px_12px_rgba(0,0,0,0.5)] line-clamp-2">
+                  Custom design. Premium finish. Free 3D preview.
                 </p>
               </div>
 
-              {/* Call-to-Action (CTA) Buttons */}
-              <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
-                <Button
-                  variant="primary"
+              {/* Mobile Call-to-Action (CTA) Buttons: 24px top spacing, 12px gap, 52px height, 8px radius */}
+              <div className="mt-6 flex flex-col gap-3 w-full">
+                {/* Primary Button: Solid green, dark text #111, full width, 52px tall, 8px radius */}
+                <a
                   href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                  className="w-full h-[52px] rounded-[8px] bg-[#8ec641] hover:bg-[#9bd44e] active:scale-[0.99] text-[#111111] font-semibold text-base flex items-center justify-center gap-2.5 shadow-lg shadow-[#8ec641]/25 transition-all duration-200"
                 >
-                  <Phone className="w-4 h-4 fill-black text-black" />
-                  <span>080762 75334</span>
-                </Button>
+                  <Phone className="w-4 h-4 fill-[#111111] text-[#111111]" />
+                  <span>Call for a Free Quote</span>
+                </a>
 
-                <Button
-                  variant="secondary"
+                {/* Secondary Button: Transparent white fill (0.12), 1.5px solid white border, white text, 8px radius, backdrop-blur 6px */}
+                <a
                   href="#projects"
+                  className="w-full h-[52px] rounded-[8px] bg-[rgba(255,255,255,0.12)] hover:bg-[rgba(255,255,255,0.2)] active:scale-[0.99] border-[1.5px] border-white text-white font-medium text-base flex items-center justify-center gap-2 backdrop-blur-[6px] shadow-sm transition-all duration-200"
                 >
                   <span>View Catalog</span>
-                </Button>
+                </a>
               </div>
+            </div>
+
+            {/* DESKTOP HERO CONTENT (>= 768px / 1024px and wider) */}
+            <div className="hidden md:block w-full max-w-[560px]">
+              {/* Eyebrow: small, uppercase, letter-spaced, green */}
+              <p className="text-xs sm:text-sm font-semibold tracking-widest text-[#8ec641] uppercase mb-3">
+                MODULAR KITCHENS &amp; INTERIORS · ETAWAH
+              </p>
+
+              {/* Headline: 56-64px, bold, white, line-height 1.1, break after "Built for" */}
+              <h1 className="font-didact font-bold text-5xl lg:text-[56px] xl:text-[64px] text-white leading-[1.1] tracking-tight">
+                Modular Kitchens Built for<br />Etawah Homes
+              </h1>
+
+              {/* Subtext: 16px headline-to-subtext spacing, 20px font, white at 90% opacity, one line */}
+              <p className="mt-4 font-kodchasan font-medium text-lg lg:text-[20px] text-white/90 leading-relaxed whitespace-normal lg:whitespace-nowrap">
+                Custom design. Premium finish. Free 3D preview.
+              </p>
+
+              {/* Buttons: 32px spacing from subtext (mt-8), 16px between buttons (gap-4, side by side) */}
+              <div className="mt-8 flex flex-row items-center gap-4">
+                {/* Primary Button: Solid green, dark text #111, phone icon, 56px tall, 8px radius */}
+                <a
+                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                  className="h-[56px] px-8 rounded-[8px] bg-[#8ec641] hover:bg-[#9bd44e] active:scale-[0.99] text-[#111111] font-semibold text-base inline-flex items-center justify-center gap-2.5 shadow-lg shadow-[#8ec641]/25 transition-all duration-200"
+                >
+                  <Phone className="w-5 h-5 fill-[#111111] text-[#111111]" />
+                  <span>Call for a Free Quote</span>
+                </a>
+
+                {/* Secondary Button: rgba(255,255,255,0.12) fill, 1.5px white border, white text, blur(6px), 56px tall, 8px radius */}
+                <a
+                  href="#projects"
+                  className="h-[56px] px-8 rounded-[8px] bg-[rgba(255,255,255,0.12)] hover:bg-[rgba(255,255,255,0.2)] active:scale-[0.99] border-[1.5px] border-white text-white font-medium text-base inline-flex items-center justify-center gap-2 backdrop-blur-[6px] shadow-sm transition-all duration-200"
+                >
+                  <span>View Catalog</span>
+                </a>
+              </div>
+
+              {/* Trust Strip: small, 14px, white at 80% */}
+              <p className="mt-5 text-[14px] text-white/80 font-medium tracking-wide">
+                Free 3D Design · 10-Year Warranty · 500+ Kitchens
+              </p>
             </div>
           </div>
         </div>
