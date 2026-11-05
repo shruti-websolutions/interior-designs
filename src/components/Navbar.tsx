@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
             Our Projects
           </a>
           <a href="#estimate" className="hover:text-[#72583d] transition-colors">
-            Get Free Estimate
+            Why Us?
           </a>
           <a href="#contact" className="hover:text-[#72583d] transition-colors">
             Contact
@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 hover:text-[#72583d] transition-colors"
             >
-              Get Free Estimate
+              Why Us?
             </a>
             <a
               href="#contact"

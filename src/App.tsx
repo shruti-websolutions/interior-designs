@@ -5,6 +5,7 @@
 
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
+import { OurProjectsSection } from './components/OurProjectsSection.tsx';
 import { StickyCallBar } from './components/StickyCallBar.tsx';
 
 export default function App() {
@@ -17,7 +18,8 @@ export default function App() {
         {/* Section 1: Home */}
         <Hero />
 
-       
+        {/* Section 2: Our Projects (Explore Kitchen Types) */}
+        <OurProjectsSection />
       </main>
 
       {/* Persistent Floating Call Bar on mobile */}
