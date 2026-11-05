@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #E2E8F0;
+    background-color: #0B0D11;
+  }
+  .font-didact {
+    font-family: 'Didact Gothic', sans-serif;
+   
+  }
+  .font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat Condensed', 'Montserrat', sans-serif;
+  }
+  .font-kodchasan {
+    font-family: 'Kodchasan', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0d11;
+}
+::-webkit-scrollbar-thumb {
+  background: #232833;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8ec641;
+}
+
+/* Reusable Button Styles - Sharp edges (no rounded corners) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 0 !important; /* Sharp corners */
+  background-color: #8ec641;
+  color: #000000;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(142, 198, 65, 0.25);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #9bd44e;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(142, 198, 65, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2.25rem; /* Large */
+  border-radius: 0 !important; /* Sharp corners */
+  background-color: transparent; /* Transparent blurred */
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: 0.025em;
+  border: 1px solid #8ec641; /* Parrot green border */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Translucent frosted hover */
+  border-color: #9bd44e;
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(142, 198, 65, 0.25);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
