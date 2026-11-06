@@ -104,7 +104,7 @@ export const Hero: React.FC = () => {
             <img
               src="/assets/aistudio/hero.webp"
               alt="Dorio Sage Green Modular Kitchen in Etawah"
-              className="w-full h-full object-cover object-[center_35%] lg:object-[72%_35%] brightness-115 md:brightness-100"
+              className="w-full h-full object-cover object-[center_35%] lg:object-[72%_35%] brightness-[1.15] md:brightness-[1.12] md:contrast-[1.05] md:saturate-[1.08]"
               loading="eager"
             />
           </picture>
@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
           <div className="absolute top-0 inset-x-0 h-[140px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.50)_0%,transparent_100%)] pointer-events-none hidden md:block" />
 
           {/* 2. Desktop Left-to-Right Linear Gradient: 0.80 at 0%, 0.55 at 35%, transparent at 65%. Right side stays bright! */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.80)_0%,rgba(0,0,0,0.55)_35%,transparent_65%)] pointer-events-none hidden md:block" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(10,7,5,0.85)_0%,rgba(10,7,5,0.72)_30%,rgba(10,7,5,0.40)_48%,transparent_68%)] pointer-events-none hidden md:block" />
         </div>
 
         {/* Main Hero Content - Anchored to bottom on mobile (<768px), vertically centered on desktop (>=768px) */}
@@ -132,11 +132,11 @@ export const Hero: React.FC = () => {
               {/* Text Container: Pure typography, completely removed box, border, and shadows */}
               <div className="space-y-3">
                 <h1 className="font-didact font-bold text-[28px] sm:text-[32px] text-white leading-[1.15] [text-shadow:0_2px_12px_rgba(0,0,0,0.5)]">
-                  Modular Kitchens Built for Etawah Homes
+                  Kitchens designed around how you cook.
                 </h1>
 
                 <p className="font-kodchasan font-medium text-[16px] text-white leading-[1.5] [text-shadow:0_2px_12px_rgba(0,0,0,0.5)] line-clamp-2">
-                  Custom design. Premium finish. Free 3D preview.
+                  Modular kitchens and interiors for Etawah homes, from a studio families have trusted for 15 years.
                 </p>
               </div>
 
@@ -148,7 +148,7 @@ export const Hero: React.FC = () => {
                   className="w-full h-[52px] bg-[#72583d] hover:bg-[#856747] active:scale-[0.99] text-white font-semibold text-base flex items-center justify-center gap-2.5 shadow-lg shadow-[#72583d]/25 transition-all duration-200"
                 >
                   <Phone className="w-4 h-4 fill-white text-white" />
-                  <span>Call for a Free Quote</span>
+                  <span>Call for a Free Estimate</span>
                 </a>
 
                 {/* Secondary Button: Transparent white fill (0.12), 1.5px solid white border, white text, backdrop-blur 6px */}
@@ -164,18 +164,18 @@ export const Hero: React.FC = () => {
             {/* DESKTOP HERO CONTENT (>= 768px / 1024px and wider) */}
             <div className="hidden md:block w-full max-w-[560px]">
               {/* Eyebrow: small, uppercase, letter-spaced, wood tone */}
-              <p className="text-xs sm:text-sm font-semibold tracking-widest text-[#72583d] uppercase mb-3">
-                MODULAR KITCHENS &amp; INTERIORS · ETAWAH
+              <p className="text-xs sm:text-sm font-semibold tracking-widest text-white uppercase mb-3">
+                MODULAR KITCHENS & INTERIORS · ETAWAH SINCE 2011
               </p>
 
               {/* Headline: 56-64px, bold, white, line-height 1.1, break after "Built for" */}
               <h1 className="font-didact font-bold text-5xl lg:text-[56px] xl:text-[64px] text-white leading-[1.1] tracking-tight">
-                Modular Kitchens Built for<br />Etawah Homes
+                Kitchens designed around how you cook.
               </h1>
 
               {/* Subtext: 16px headline-to-subtext spacing, 20px font, white at 90% opacity, one line */}
               <p className="mt-4 font-kodchasan font-medium text-lg lg:text-[20px] text-white/90 leading-relaxed whitespace-normal lg:whitespace-nowrap">
-                Custom design. Premium finish. Free 3D preview.
+                Modular kitchens and interiors for Etawah homes, <br />from a studio families have trusted for 15 years.
               </p>
 
               {/* Buttons: 32px spacing from subtext (mt-8), 16px between buttons (gap-4, side by side) */}
@@ -207,7 +207,7 @@ export const Hero: React.FC = () => {
         </div>
       </section>
 
-    
+
     </>
   );
 };
