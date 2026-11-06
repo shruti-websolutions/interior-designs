@@ -55,7 +55,7 @@ export const OurProjectsSection: React.FC = () => {
                 />
 
                 {/* Subtle Hover Overlay with Quick Preview Icon */}
-                <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/25 opacity-100 md:opacity-0 md:group-hover:opacity-100  transition-opacity duration-300 flex items-center justify-center">
                   <span className="px-3 py-1.5 bg-white/95 text-[#111111] text-xs font-semibold rounded shadow-md flex items-center gap-1.5 backdrop-blur-sm">
                     <Eye className="w-3.5 h-3.5 text-[#72583d]" />
                     <span>View Layout Specs</span>
@@ -91,7 +91,7 @@ export const OurProjectsSection: React.FC = () => {
         </div>
 
         {/* Bottom Quick Trust Strip */}
-        <div className="mt-12 sm:mt-16 border-neutral-200/80 flex flex-col sm:flex-row items-center justify-end gap-4 text-md sm:text-md text-neutral-600">
+        <div className="mt-12 sm:mt-16 border-neutral-200/80 flex flex-row sm:flex-row items-center justify-end gap-4 text-md sm:text-md text-neutral-600">
           {/* <div className="flex items-center gap-2">
             <span className="font-bold text-[#111111]">100% Customized For Etawah Homes:</span>
             <span>Laser measurement, 3D computer design preview & 10-year warranty.</span>

@@ -39,25 +39,25 @@ export const WhyChooseUsSection: React.FC = () => {
   return (
     <section
       id="why-us"
-      className="py-14 sm:py-20 bg-[#EFEFEF] text-neutral-900 border-y border-neutral-300/80 relative"
+      className="py-25 sm:py-25 bg-[#EFEFEF] text-neutral-900 border-y border-neutral-300/80 relative"
     >
       {/* Scroll margin anchor for #estimate link in Navbar */}
       <div id="estimate" className="absolute -top-20 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+      <div className="max-w-8xl  px-4 sm:px-6 lg:px-2">
+
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <p className="text-xs sm:text-sm font-bold font-didact text-[#72583d] uppercase tracking-widest mb-2">
-            WHY CHOOSE US
+        <div className="text-center max-w-8xl mx-auto mb-12 sm:mb-16">
+          <p className="text-xl sm:text-2xl font-bold font-didact text-[#72583d] uppercase tracking-widest mb-2">
+            WHY CHOOSE US?
           </p>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111111] font-didact tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#111111] font-didact tracking-tight leading-tight">
             Trusted Modular Interiors &amp; Custom Craftsmanship
           </h2>
 
-          <p className="mt-3.5 text-sm sm:text-[15px] text-neutral-600 font-kodchasan leading-relaxed max-w-2xl mx-auto">
-            At Dorio Modular Kitchen &amp; Interior, we bring over 15 years of design experience to home and commercial spaces across Etawah. Established in 2011, our team of expert decorators specializes in custom modular furniture, high-grade wood and stainless steel craftsmanship, and end-to-end interior execution—backed by a full service guarantee.
+          <p className="mt-3.5 text-[19px] sm:text-[#292929] font-kodchasan leading-relaxed max-w-2xl mx-auto">
+            Dorio Modular Kitchen & Interior brings 15+ years of expert craftsmanship to Etawah, delivering custom modular furniture and end-to-end interior execution with a full service guarantee.
           </p>
         </div>
 
@@ -72,16 +72,16 @@ export const WhyChooseUsSection: React.FC = () => {
               >
                 {/* Standalone Minimalist Icon (Matches Reference Screenshot) */}
                 <div className="text-neutral-700 group-hover:text-[#72583d] transition-colors duration-200 mb-3 sm:mb-4">
-                  <Icon className="w-8 h-8 sm:w-9 sm:h-9 stroke-[1.65]" />
+                  <Icon className="w-14 h-14 sm:w-14 sm:h-14 stroke-[1.65]" />
                 </div>
 
                 {/* Bold Heading */}
-                <h3 className="font-bold text-base sm:text-[17px] text-[#111111] font-didact tracking-tight leading-snug">
+                <h3 className="font-bold text-[19px] sm:text-[17px] text-[#111111] font-didact tracking-tight leading-snug">
                   {item.heading}
                 </h3>
 
                 {/* Clean Description */}
-                <p className="mt-1.5 sm:mt-2 text-xs sm:text-[13.5px] text-neutral-600 font-kodchasan leading-relaxed max-w-[260px]">
+                <p className="mt-1.5 sm:mt-2 text-[18px] text-[#292929] font-kodchasan leading-relaxed max-w-[420px]">
                   {item.description}
                 </p>
               </div>

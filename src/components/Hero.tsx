@@ -136,7 +136,7 @@ export const Hero: React.FC = () => {
                 </h1>
 
                 <p className="font-kodchasan font-medium text-[16px] text-white leading-[1.5] [text-shadow:0_2px_12px_rgba(0,0,0,0.5)] line-clamp-2">
-                  Modular kitchens and interiors for Etawah homes, from a studio families have trusted for 15 years.
+                  Modular kitchens and interiors for Etawah homes.
                 </p>
               </div>
 

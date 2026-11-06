@@ -136,7 +136,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-[#120F0D] text-[#E5E5E5] border-t border-neutral-800 scroll-mt-16 font-sans pt-12 sm:pt-16 pb-28 lg:pb-12"
+      className="bg-[#120F0D] text-[#E5E5E5] border-t border-neutral-800 scroll-mt-16 font-sans pt-12 sm:pt-16 pb-2"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14 pb-12 border-b border-neutral-800">
